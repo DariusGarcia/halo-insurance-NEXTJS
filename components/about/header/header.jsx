@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Header() {
   return (
     <>
@@ -32,9 +34,14 @@ export default function Header() {
       {/* Header section */}
       <div className='px-6 md:pt-0 lg:px-8'>
         <div className='mx-auto max-w-2xl pt-12 text-center '>
-          <h2 className='text-4xl font-bold tracking-tight text-black sm:text-6xl'>
-            Halo Insurance
-          </h2>
+          <div className='flex justify-center text-center place-content-center w-full'>
+            <Image
+              width={500}
+              height={500}
+              alt='about page header'
+              src='/favicon.png'
+            />
+          </div>
           <p className='mt-6 text-lg leading-8 text-black'>
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
