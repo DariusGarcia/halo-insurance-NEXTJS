@@ -16,49 +16,8 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid'
-import logo from '../../public/favicon.png'
 import CallAgent from '../header/landingHeader/callAgent'
-
-const products = [
-  {
-    name: 'Get a quote',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '#',
-    icon: ChartPieIcon,
-  },
-  {
-    name: 'Insurance packages',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '#',
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: 'Security',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '#',
-    icon: FingerPrintIcon,
-  },
-  {
-    name: 'Integrations',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '#',
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: 'Automations',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '#',
-    icon: ArrowPathIcon,
-  },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import Link from 'next/link'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -70,16 +29,16 @@ export default function Navbar() {
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
-          <a href='#' className='-m-1.5 p-1.5'>
+          <Link href='/' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Halo Insurance</span>
             <Image
               width={200}
               height={200}
-              className='h-8 w-auto'
+              className='h-12 w-auto'
               src='/favicon.png'
               alt='navbar company logo'
             />
-          </a>
+          </Link>
         </div>
         <div className='flex lg:hidden'>
           <button
@@ -93,8 +52,8 @@ export default function Navbar() {
         </div>
         <Popover.Group className='hidden lg:flex lg:gap-x-12'>
           <Popover className='relative'>
-            <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
-              Services
+            <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'>
+              Products
               <ChevronDownIcon
                 className='h-5 w-5 flex-none text-gray-400'
                 aria-hidden='true'
@@ -115,7 +74,7 @@ export default function Navbar() {
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'
+                      className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 '
                     >
                       <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
                         <item.icon
@@ -155,32 +114,26 @@ export default function Navbar() {
             </Transition>
           </Popover>
 
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Features
-          </a>
           <a
-            href='/testimonials'
-            className='text-sm font-semibold leading-6 text-gray-900'
+            href='/resources'
+            className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
-            Testimonials
+            Resources
           </a>
           <a
-            href='/about'
-            className='text-sm font-semibold leading-6 text-gray-900'
+            href='/company/about'
+            className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
             Company
           </a>
           <a
-            href='/contact'
-            className='text-sm font-semibold leading-6 text-gray-900'
+            href='/company/contact'
+            className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
             Contact Us
           </a>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          {/* <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Call an agent <span aria-hidden='true'>&rarr;</span>
-          </a> */}
           <CallAgent />
         </div>
       </nav>
@@ -219,7 +172,7 @@ export default function Navbar() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50'>
-                        Services
+                        Products
                         <ChevronDownIcon
                           className={classNames(
                             open ? 'rotate-180' : '',
@@ -244,22 +197,22 @@ export default function Navbar() {
                   )}
                 </Disclosure>
                 <a
-                  href='#'
+                  href='/resources'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
-                  Features
+                  Resources
                 </a>
                 <a
-                  href='/testimonials'
-                  className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >
-                  Testimonials
-                </a>
-                <a
-                  href='/about'
+                  href='/company/about'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
                   Company
+                </a>
+                <a
+                  href='/company/contact'
+                  className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+                >
+                  Contact Us
                 </a>
               </div>
               <div className='py-6 '>
@@ -272,3 +225,44 @@ export default function Navbar() {
     </header>
   )
 }
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+const products = [
+  {
+    name: 'Overview',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+    href: '/products/explore-products',
+    icon: ChartPieIcon,
+  },
+  {
+    name: 'Insurance packages',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+    href: '#',
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: 'Get a quote',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+    href: '/company/contact',
+    icon: FingerPrintIcon,
+  },
+  {
+    name: 'Integrations',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+    href: '#',
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: 'Automations',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+    href: '#',
+    icon: ArrowPathIcon,
+  },
+]
+const callsToAction = [
+  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+]
