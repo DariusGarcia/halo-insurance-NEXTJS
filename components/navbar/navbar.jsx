@@ -422,7 +422,7 @@ const products = [
   {
     name: 'Products overview',
     description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '/products/explore-products',
+    href: '/products/explore',
     icon: UsersIcon,
   },
   {
@@ -460,7 +460,7 @@ const resources = [
   {
     name: 'Contact Us',
     description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: 'company/contact',
+    href: '/company/contact',
     icon: ChatBubbleBottomCenterTextIcon,
   },
 ]
@@ -468,7 +468,7 @@ const company = [
   {
     name: 'Why us?',
     description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '/company/',
+    href: '/',
     icon: HandThumbUpIcon,
   },
   {
@@ -500,7 +500,7 @@ const company = [
 const productsCallsToAction = [
   {
     name: 'Watch demo',
-    href: 'products/explore-products',
+    href: 'products/explore',
     icon: PlayCircleIcon,
   },
   { name: 'Contact sales', href: '/company/contact', icon: PhoneIcon },

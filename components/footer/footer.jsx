@@ -61,7 +61,7 @@ export default function Example() {
             <div className='md:grid md:grid-cols-2 md:gap-8'>
               <div>
                 <Link
-                  href='/products/explore-products'
+                  href='/products/explore'
                   className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
                 >
                   Products
@@ -163,7 +163,7 @@ const navigation = {
     { name: 'Insights', href: '#' },
   ],
   support: [
-    { name: 'Pricing', href: '/products/explore-products' },
+    { name: 'Pricing', href: '/products/explore' },
     { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
     { name: 'FAQ', href: '/resources/faq' },

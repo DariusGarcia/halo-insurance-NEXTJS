@@ -80,7 +80,7 @@ export default function LandingHeader({ landingHeader }) {
               <div className='mt-10 flex items-center gap-x-6'>
                 {/* TODO: change link */}
                 <Link
-                  href='/products/explore-products'
+                  href='/products/explore'
                   className='rounded-md bg-sky-600 px-3.5 py-2.5
                   text-sm font-semibold text-white shadow-sm hover:bg-sky-500
                   focus-visible:outline focus-visible:outline-2

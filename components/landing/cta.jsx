@@ -13,7 +13,7 @@ export default function Example() {
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
             <Link
-              href='/products/explore-products'
+              href='/products/explore'
               className='rounded-md bg-stone-50 px-6 py-4 text-sm font-semibold text-black shadow-sm hover:bg-stone-100 hover:text-sky-600 hover:scale-95 ease-in-out transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             >
               Get started
