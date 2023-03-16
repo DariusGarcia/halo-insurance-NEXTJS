@@ -70,8 +70,8 @@ export default function ContentSection() {
 }
 
 const stats = [
-  { label: 'Business was founded', value: '2012' },
-  { label: 'People on the team', value: '120+' },
-  { label: 'Users on the platform', value: '250k' },
-  { label: 'Paid out to creators', value: '$70M' },
+  { label: 'Business was founded', value: '2022' },
+  { label: 'People on the team', value: '10+' },
+  { label: 'Users with us', value: '1000' },
+  { label: 'Et labore commodo nulla aliqua', value: '$1M' },
 ]
