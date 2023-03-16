@@ -17,35 +17,36 @@ import {
   PlayCircleIcon,
 } from '@heroicons/react/20/solid'
 import logo from '../../public/favicon.png'
+import CallAgent from '../header/landingHeader/callAgent'
 
 const products = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of your traffic',
+    name: 'Get a quote',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '#',
     icon: ChartPieIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers',
+    name: 'Insurance packages',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '#',
     icon: CursorArrowRaysIcon,
   },
   {
     name: 'Security',
-    description: 'Your customers’ data will be safe and secure',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '#',
     icon: FingerPrintIcon,
   },
   {
     name: 'Integrations',
-    description: 'Connect with third-party tools',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '#',
     icon: SquaresPlusIcon,
   },
   {
     name: 'Automations',
-    description: 'Build strategic funnels that will convert',
+    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '#',
     icon: ArrowPathIcon,
   },
@@ -72,10 +73,10 @@ export default function Navbar() {
           <a href='#' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Halo Insurance</span>
             <Image
-              className='h-8 w-auto'
-              src='/favicon.png'
               width={200}
               height={200}
+              className='h-8 w-auto'
+              src='/favicon.png'
               alt='navbar company logo'
             />
           </a>
@@ -118,7 +119,7 @@ export default function Navbar() {
                     >
                       <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
                         <item.icon
-                          className='h-6 w-6 text-gray-600 group-hover:text-indigo-600'
+                          className='h-6 w-6 text-gray-600 group-hover:text-sky-600'
                           aria-hidden='true'
                         />
                       </div>
@@ -169,12 +170,18 @@ export default function Navbar() {
           >
             Company
           </a>
+          <a
+            href='/contact'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
+            Contact Us
+          </a>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          {/* extra link */}
           {/* <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Log in <span aria-hidden='true'>&rarr;</span>
+            Call an agent <span aria-hidden='true'>&rarr;</span>
           </a> */}
+          <CallAgent />
         </div>
       </nav>
       <Dialog
@@ -255,13 +262,8 @@ export default function Navbar() {
                   Company
                 </a>
               </div>
-              <div className='py-6'>
-                <a
-                  href='#'
-                  className='-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >
-                  Log in
-                </a>
+              <div className='py-6 '>
+                <CallAgent />
               </div>
             </div>
           </div>

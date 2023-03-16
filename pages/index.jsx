@@ -16,7 +16,6 @@ export default function Home() {
       </Head>
       {/* TODO: change h-screen to h-full */}
       <div className='h-full overflow-hidden'>
-        <Navbar />
         <main className='h-full'>
           <LandingHeader />
           <LandingServices />
