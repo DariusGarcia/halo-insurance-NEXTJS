@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {
   ChatBubbleBottomCenterTextIcon,
   ClipboardDocumentIcon,
+  CogIcon,
   CurrencyDollarIcon,
   HandThumbUpIcon,
   LightBulbIcon,

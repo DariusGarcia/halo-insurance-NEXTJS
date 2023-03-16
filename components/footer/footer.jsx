@@ -159,7 +159,7 @@ const navigation = {
   products: [
     { name: 'Explore products', href: '/products/explore' },
     { name: 'Insurance packages', href: '#' },
-    { name: 'Request quote', href: '/company/contact' },
+    { name: 'Request a quote', href: '/company/contact' },
   ],
   resources: [
     { name: 'Pricing', href: '/products/explore' },
@@ -175,9 +175,9 @@ const navigation = {
     { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: 'Claim', href: '/company/claims' },
     { name: 'Privacy', href: '/company/privacy' },
     { name: 'Terms', href: '/company/terms' },
+    { name: 'Accessibility', href: '/company/accessibility' },
   ],
   social: [
     {
