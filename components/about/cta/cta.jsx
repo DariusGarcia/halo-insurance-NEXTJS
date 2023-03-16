@@ -43,7 +43,7 @@ export default function Cta() {
                   href='#'
                   className='text-sm font-semibold leading-6 text-black hover:underline'
                 >
-                  See our job postings <span aria-hidden='true'>&rarr;</span>
+                  Et labore commodo <span aria-hidden='true'>&rarr;</span>
                 </Link>
               </div>
             </div>
@@ -81,10 +81,10 @@ export default function Cta() {
 }
 
 const benefits = [
-  'Competitive salaries',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
+  'Et labore commodo nulla aliqua',
+  'Flexible plans to fit your needs',
+  '30 days "Et labore commodo nulla aliqua",',
+  'Et labore commodo nulla aliqua',
   'Benefits for you and your family',
-  'A great work environment',
+  'A great experience',
 ]

@@ -35,7 +35,7 @@ export default function Header() {
           <h2 className='text-4xl font-bold tracking-tight text-black sm:text-6xl'>
             Halo Insurance
           </h2>
-          <p className='mt-6 text-lg leading-8 text-gray-600'>
+          <p className='mt-6 text-lg leading-8 text-black'>
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
             fugiat aliqua.
