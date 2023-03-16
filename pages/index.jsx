@@ -1,11 +1,11 @@
-import Navbar from '../components/navbar/navbar'
 import Head from 'next/head'
 import LandingHeader from '@/components/header/landingHeader/landingHeader'
 import LandingServices from '@/components/landing/services'
 import LandingTestimonials from '@/components/testimonials/testimonials'
 import LandingCTA from '@/components/landing/cta'
+import { createClient } from 'next-sanity'
 
-export default function Home() {
+export default function Home({ landingHeader, testimonialsText }) {
   return (
     <>
       <Head>
@@ -16,15 +16,33 @@ export default function Home() {
           content='Protect your life and assets with Halo Insurance. We offer a range of insurance products including auto, home, life, and health insurance. Our policies are designed to provide you with the coverage you need to safeguard your future. Contact us today for a personalized quote.'
         />
       </Head>
-      {/* TODO: change h-screen to h-full */}
       <div className='h-full overflow-hidden'>
         <main className='h-full'>
-          <LandingHeader />
+          <LandingHeader landingHeader={landingHeader} />
           <LandingServices />
-          <LandingTestimonials />
+          <LandingTestimonials testimonialsText={testimonialsText} />
           <LandingCTA />
         </main>
       </div>
     </>
   )
+}
+
+const client = createClient({
+  projectId: 'uanlttdv',
+  dataset: 'production',
+  apiVersion: '2023-03-16',
+  useCdn: false,
+})
+
+export async function getStaticProps() {
+  const landingHeader = await client.fetch(`*[_type == "landingHeader"]`)
+  const testimonialsText = await client.fetch(`*[_type == "testimonials"]`)
+
+  return {
+    props: {
+      landingHeader,
+      testimonialsText,
+    },
+  }
 }

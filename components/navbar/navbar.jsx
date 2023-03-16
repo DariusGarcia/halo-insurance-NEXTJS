@@ -1,4 +1,7 @@
+import { Fragment, useState } from 'react'
 import Image from 'next/image'
+import CallAgent from '../header/landingHeader/callAgent'
+import Link from 'next/link'
 import {
   ChatBubbleBottomCenterTextIcon,
   ClipboardDocumentIcon,
@@ -9,7 +12,6 @@ import {
   RectangleStackIcon,
   UsersIcon,
 } from '@heroicons/react/24/outline'
-import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -24,14 +26,19 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid'
-import CallAgent from '../header/landingHeader/callAgent'
-import Link from 'next/link'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className='bg-white'>
+      {/*
+       ***********************
+       *
+       * Large viewport navbar
+       *
+       * *********************
+       */}
       <nav
         className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
         aria-label='Global'
@@ -59,7 +66,7 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className='hidden lg:flex lg:gap-x-12'>
-          {/* products dropdown */}
+          {/* products dropdown menu */}
           <Popover className='relative'>
             <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'>
               Products
@@ -121,7 +128,7 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          {/* resources dropdown */}
+          {/* resources dropdown menu */}
           <Popover className='relative'>
             <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'>
               Resources
@@ -169,7 +176,7 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          {/* company dropdown */}
+          {/* company dropdown menu */}
           <Popover className='relative'>
             <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'>
               Company
@@ -231,6 +238,7 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
+          {/* contact nav link */}
           <Link
             href='/company/contact'
             className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
@@ -242,6 +250,13 @@ export default function Navbar() {
           <CallAgent />
         </div>
       </nav>
+      {/*
+       ***********************
+       *
+       * Mobile hamburger menu
+       *
+       * *********************
+       */}
       <Dialog
         as='div'
         className='lg:hidden'
@@ -273,6 +288,7 @@ export default function Navbar() {
           <div className='mt-6 flow-root'>
             <div className='-my-6 divide-y divide-gray-500/10'>
               <div className='space-y-2 py-6'>
+                {/* products dropdown menu */}
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
@@ -301,6 +317,7 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
+                {/* resources dropdown menu */}
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
@@ -329,6 +346,7 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
+                {/* company dropdown menu */}
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
@@ -343,7 +361,7 @@ export default function Navbar() {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className='mt-2 space-y-2'>
-                        {[...products, ...companyCallsToAction].map((item) => (
+                        {[...company, ...companyCallsToAction].map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as='a'
@@ -357,18 +375,7 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
-                <Link
-                  href='/resources'
-                  className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >
-                  Resources
-                </Link>
-                <Link
-                  href='/company/about'
-                  className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >
-                  Company
-                </Link>
+                {/* Contact us nav link */}
                 <Link
                   href='/company/contact'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
@@ -379,6 +386,26 @@ export default function Navbar() {
               <div className='py-6 '>
                 <CallAgent />
               </div>
+              <Link
+                href='tel:5624470025'
+                className='flex flex-row gap-2 items-center w-max hover:bg-stone-100 p-2 rounded-lg'
+              >
+                <PhoneIcon
+                  className='h-7 w-6 text-gray-400'
+                  aria-hidden='true'
+                />
+                <p> (562) 447-0025</p>
+              </Link>
+              <Link
+                href='mailto:halo@halo.com'
+                className='flex flex-row gap-2 items-center w-max hover:bg-stone-100 p-2 rounded-lg'
+              >
+                <EnvelopeIcon
+                  className='h-7 w-6 text-gray-400'
+                  aria-hidden='true'
+                />
+                <p> halo@halo.com</p>
+              </Link>
             </div>
           </div>
         </Dialog.Panel>
@@ -410,18 +437,6 @@ const products = [
     href: '/company/contact',
     icon: CurrencyDollarIcon,
   },
-  // {
-  //   name: 'Integrations',
-  //   description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-  //   href: '#',
-  //   icon: SquaresPlusIcon,
-  // },
-  // {
-  //   name: 'Automations',
-  //   description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-  //   href: '#',
-  //   icon: ArrowPathIcon,
-  // },
 ]
 const resources = [
   {
@@ -469,12 +484,6 @@ const company = [
     icon: HeartIcon,
   },
   {
-    name: 'Contact Us',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '/company/contact',
-    icon: ChatBubbleBottomCenterTextIcon,
-  },
-  {
     name: 'Terms of service',
     description: 'Sint aliqua anim nulla sunt mollit id pariatur',
     href: '/company/terms',
@@ -487,9 +496,14 @@ const company = [
     icon: FingerPrintIcon,
   },
 ]
+
 const productsCallsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  {
+    name: 'Watch demo',
+    href: 'products/explore-products',
+    icon: PlayCircleIcon,
+  },
+  { name: 'Contact sales', href: '/company/contact', icon: PhoneIcon },
 ]
 const companyCallsToAction = [
   { name: 'halo@halo.com', href: 'mailto:halo@halo.com', icon: EnvelopeIcon },
