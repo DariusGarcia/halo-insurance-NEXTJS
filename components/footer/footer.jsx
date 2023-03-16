@@ -67,7 +67,7 @@ export default function Example() {
                   Products
                 </Link>
                 <ul role='list' className='mt-6 space-y-4'>
-                  {navigation.solutions.map((item) => (
+                  {navigation.products.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -84,10 +84,10 @@ export default function Example() {
                   href='/company/faq'
                   className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
                 >
-                  Support
+                  Resources
                 </Link>
                 <ul role='list' className='mt-6 space-y-4'>
-                  {navigation.support.map((item) => (
+                  {navigation.resources.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -156,21 +156,22 @@ export default function Example() {
 }
 
 const navigation = {
-  solutions: [
-    { name: 'Insurance', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+  products: [
+    { name: 'Explore products', href: '/products/explore' },
+    { name: 'Insurance packages', href: '#' },
+    { name: 'Request quote', href: '/company/contact' },
   ],
-  support: [
+  resources: [
     { name: 'Pricing', href: '/products/explore' },
-    { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
     { name: 'FAQ', href: '/resources/faq' },
+    { name: 'Contact', href: '/company/contact' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Why us?', href: '/' },
+    { name: 'About', href: '/company/about' },
+    { name: 'Testimonials', href: '/company/testimonials' },
+    { name: 'Contact', href: '/company/about' },
     { name: 'Partners', href: '#' },
   ],
   legal: [
