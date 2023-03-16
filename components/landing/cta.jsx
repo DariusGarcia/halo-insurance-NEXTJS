@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Example() {
   return (
     <div className='bg-sky-600'>
@@ -10,18 +12,18 @@ export default function Example() {
             See options and pricing in minutes.
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
-            <a
+            <Link
               href='/products/explore-products'
               className='rounded-md bg-stone-50 px-6 py-4 text-sm font-semibold text-black shadow-sm hover:bg-stone-100 hover:text-sky-600 hover:scale-95 ease-in-out transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             >
               Get started
-            </a>
-            <a
+            </Link>
+            <Link
               href='#'
               className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-90'
             >
               Learn more <span aria-hidden='true'>→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -83,13 +83,13 @@ export default function Navbar() {
                         />
                       </div>
                       <div className='flex-auto'>
-                        <a
+                        <Link
                           href={item.href}
                           className='block font-semibold text-gray-900'
                         >
                           {item.name}
                           <span className='absolute inset-0' />
-                        </a>
+                        </Link>
                         <p className='mt-1 text-gray-600'>{item.description}</p>
                       </div>
                     </div>
@@ -97,7 +97,7 @@ export default function Navbar() {
                 </div>
                 <div className='grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50'>
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
@@ -107,31 +107,31 @@ export default function Navbar() {
                         aria-hidden='true'
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Panel>
             </Transition>
           </Popover>
 
-          <a
+          <Link
             href='/resources'
             className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
             Resources
-          </a>
-          <a
+          </Link>
+          <Link
             href='/company/about'
             className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
             Company
-          </a>
-          <a
+          </Link>
+          <Link
             href='/company/contact'
             className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:opacity-80'
           >
             Contact Us
-          </a>
+          </Link>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <CallAgent />
@@ -146,7 +146,7 @@ export default function Navbar() {
         <div className='fixed inset-0 z-10' />
         <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <Link href='#' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Halo Insurance</span>
               <Image
                 className='h-8 w-auto'
@@ -155,7 +155,7 @@ export default function Navbar() {
                 height={200}
                 alt='navbar company logo'
               />
-            </a>
+            </Link>
             <button
               type='button'
               className='-m-2.5 rounded-md p-2.5 text-gray-700'
@@ -196,24 +196,24 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
-                <a
+                <Link
                   href='/resources'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
                   Resources
-                </a>
-                <a
+                </Link>
+                <Link
                   href='/company/about'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
                   Company
-                </a>
-                <a
+                </Link>
+                <Link
                   href='/company/contact'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
               <div className='py-6 '>
                 <CallAgent />

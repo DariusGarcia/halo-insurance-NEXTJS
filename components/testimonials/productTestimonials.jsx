@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const testimonials = [
   {
     body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
@@ -53,7 +55,6 @@ const testimonials = [
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
   },
-  // More testimonials...
 ]
 
 export default function ProductsTestimonials() {
@@ -80,10 +81,12 @@ export default function ProductsTestimonials() {
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
                   <figcaption className='mt-6 flex items-center gap-x-4'>
-                    <img
+                    <Image
+                      width={500}
+                      height={500}
                       className='h-10 w-10 rounded-full bg-gray-50'
                       src={testimonial.author.imageUrl}
-                      alt=''
+                      alt='testimonials'
                     />
                     <div>
                       <div className='font-semibold text-gray-900'>
