@@ -81,7 +81,7 @@ const tiers = [
     description: 'Everything necessary to get started.',
     features: [
       '5 products',
-      'Up to 1,000 subscribers',
+      'Et labore commodo nulla aliqua',
       'Basic analytics',
       '48-hour support response time',
     ],
@@ -92,13 +92,13 @@ const tiers = [
     href: '/company/contact',
     price: { monthly: '$30', annually: '$24' },
     description:
-      'Everything in Basic, plus essential tools for growing your business.',
+      'Everything in Basic, plus essential tools for "Et labore commodo nulla aliqua",',
     features: [
       '25 products',
-      'Up to 10,000 subscribers',
+      'Et labore commodo nulla aliqua',
       'Advanced analytics',
       '24-hour support response time',
-      'Marketing automations',
+      'Et labore commodo nulla aliqua',
     ],
   },
   {
@@ -107,13 +107,13 @@ const tiers = [
     href: '/company/contact',
     price: { monthly: '$60', annually: '$48' },
     description:
-      'Everything in Essential, plus collaboration tools and deeper insights.',
+      'Everything in Essential, plus "Et labore commodo nulla aliqua.',
     features: [
       'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
+      'Et labore commodo nulla aliqua',
+      'Et labore commodo nulla aliqua',
       '1-hour, dedicated support response time',
-      'Marketing automations',
+      'Et labore commodo nulla aliqua',
       'Custom reporting tools',
     ],
   },

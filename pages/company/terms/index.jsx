@@ -382,9 +382,9 @@ export default function TermsOfService() {
                     <dd className='mt-4 lg:col-span-7 lg:mt-0 flex flex-col gap-8'>
                       <p className='text-base leading-7 text-black'>
                         These Terms are governed by the substantive laws of the
-                        State of Massachusetts, without respect to its conflict
-                        of laws principles. If any provision is found to be
-                        invalid by any court having competent jurisdiction, the
+                        State of California, without respect to its conflict of
+                        laws principles. If any provision is found to be invalid
+                        by any court having competent jurisdiction, the
                         invalidity of such provision shall not affect the
                         validity of the remaining provisions of these Terms,
                         which shall remain in full force and effect. No waiver
