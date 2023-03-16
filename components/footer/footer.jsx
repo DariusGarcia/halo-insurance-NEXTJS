@@ -1,16 +1,16 @@
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid'
 
 export default function Example() {
   return (
-    <footer className='bg-white' aria-labelledby='footer-heading'>
+    <footer className='bg-white border-t-2' aria-labelledby='footer-heading'>
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
-      <div className='mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32'>
+      <div className='mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-16 lg:px-8'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
-          <div className='space-y-8'>
+          <div className='space-y-4'>
             <Link href='/' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Halo Insurance</span>
               <Image
@@ -28,18 +28,22 @@ export default function Example() {
               <PhoneIcon className='h-7 w-6 text-gray-400' aria-hidden='true' />
               <p> (562) 447-0025</p>
             </Link>
-            <div className='flex flex-row gap-2 items-center w-max hover:bg-stone-100 p-2 rounded-lg'>
+            <Link
+              href='mailto:halo@halo.com'
+              className='flex flex-row gap-2 items-center w-max hover:bg-stone-100 p-2 rounded-lg'
+            >
               <EnvelopeIcon
                 className='h-7 w-6 text-gray-400'
                 aria-hidden='true'
               />
               <p> halo@halo.com</p>
-            </div>
+            </Link>
             <p className='text-sm leading-6 text-gray-600'>
               Let us take care of the unexpected, so you can focus on what
               matters most.
             </p>
-            <div className='flex space-x-6'>
+            {/* social media links */}
+            {/* <div className='flex space-x-6'>
               {navigation.social.map((item) => (
                 <Link
                   key={item.name}
@@ -50,14 +54,18 @@ export default function Example() {
                   <item.icon className='h-6 w-6' aria-hidden='true' />
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
+          {/* website navigation links */}
           <div className='mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0'>
             <div className='md:grid md:grid-cols-2 md:gap-8'>
               <div>
-                <h3 className='text-sm font-semibold leading-6 text-gray-900 p-2'>
-                  Services
-                </h3>
+                <Link
+                  href='/products/explore-products'
+                  className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
+                >
+                  Products
+                </Link>
                 <ul role='list' className='mt-6 space-y-4'>
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
@@ -72,9 +80,12 @@ export default function Example() {
                 </ul>
               </div>
               <div className='mt-10 md:mt-0'>
-                <h3 className='text-sm font-semibold leading-6 text-gray-900 p-2'>
+                <Link
+                  href='/company/faq'
+                  className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
+                >
                   Support
-                </h3>
+                </Link>
                 <ul role='list' className='mt-6 space-y-4'>
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -91,9 +102,12 @@ export default function Example() {
             </div>
             <div className='md:grid md:grid-cols-2 md:gap-8'>
               <div>
-                <h3 className='text-sm font-semibold leading-6 text-gray-900 p-2'>
+                <Link
+                  href='/company/about'
+                  className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
+                >
                   Company
-                </h3>
+                </Link>
                 <ul role='list' className='mt-6 space-y-4'>
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -108,9 +122,12 @@ export default function Example() {
                 </ul>
               </div>
               <div className='mt-10 md:mt-0'>
-                <h3 className='text-sm font-semibold leading-6 text-gray-900 p-2'>
+                <Link
+                  href='/company/terms'
+                  className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
+                >
                   Legal
-                </h3>
+                </Link>
                 <ul role='list' className='mt-6 space-y-4'>
                   {navigation.legal.map((item) => (
                     <li key={item.name}>

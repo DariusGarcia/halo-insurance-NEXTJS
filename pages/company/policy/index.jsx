@@ -1,3 +1,3 @@
 export default function PrivacyPolicy() {
-  return <div>index</div>
+  return <div className='h-screen text-center'>Privacy Policy</div>
 }

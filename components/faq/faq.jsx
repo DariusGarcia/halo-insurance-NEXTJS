@@ -1,14 +1,21 @@
 import { Disclosure } from '@headlessui/react'
-import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
+import {
+  MinusSmallIcon,
+  PlusSmallIcon,
+  LightBulbIcon,
+} from '@heroicons/react/24/outline'
 
 export default function FaqComponent() {
   return (
     <div className='bg-white'>
-      <div className='mx-auto max-w-7xl px-6 py-12 sm:py-24 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-6 py-12 sm:py-12 lg:px-8'>
         <div className='mx-auto max-w-4xl '>
-          <h4 className='text-xl font-bold p-2 leading-10 tracking-tight text-sky-500'>
-            FAQ
-          </h4>
+          <span className='flex flex-row items-center'>
+            <h4 className='text-xl font-bold p-2 leading-10 tracking-tight text-sky-500'>
+              FAQ
+            </h4>
+            <LightBulbIcon className='h-6 w-auto text-sky-600' />
+          </span>
           <h3 className='text-2xl font-bold p-2 leading-10 tracking-tight text-gray-900 underline'>
             Frequently asked questions
           </h3>
