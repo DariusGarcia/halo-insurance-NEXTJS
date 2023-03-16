@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {} from '@heroicons/react/24/outline'
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
@@ -15,6 +16,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid'
+import logo from '../../public/favicon.png'
 
 const products = [
   {
@@ -68,11 +70,13 @@ export default function Navbar() {
       >
         <div className='flex lg:flex-1'>
           <a href='#' className='-m-1.5 p-1.5'>
-            <span className='sr-only'>Your Company</span>
-            <img
+            <span className='sr-only'>Halo Insurance</span>
+            <Image
               className='h-8 w-auto'
-              src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-              alt=''
+              src='/favicon.png'
+              width={200}
+              height={200}
+              alt='navbar company logo'
             />
           </a>
         </div>
@@ -89,7 +93,7 @@ export default function Navbar() {
         <Popover.Group className='hidden lg:flex lg:gap-x-12'>
           <Popover className='relative'>
             <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
-              Product
+              Services
               <ChevronDownIcon
                 className='h-5 w-5 flex-none text-gray-400'
                 aria-hidden='true'
@@ -153,17 +157,24 @@ export default function Navbar() {
           <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
             Features
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Marketplace
+          <a
+            href='/testimonials'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
+            Testimonials
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='/about'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
             Company
           </a>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          {/* extra link */}
+          {/* <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
             Log in <span aria-hidden='true'>&rarr;</span>
-          </a>
+          </a> */}
         </div>
       </nav>
       <Dialog
@@ -176,11 +187,13 @@ export default function Navbar() {
         <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
             <a href='#' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Your Company</span>
-              <img
+              <span className='sr-only'>Halo Insurance</span>
+              <Image
                 className='h-8 w-auto'
-                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-                alt=''
+                src='/favicon.png'
+                width={200}
+                height={200}
+                alt='navbar company logo'
               />
             </a>
             <button
@@ -199,7 +212,7 @@ export default function Navbar() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50'>
-                        Product
+                        Services
                         <ChevronDownIcon
                           className={classNames(
                             open ? 'rotate-180' : '',
@@ -230,13 +243,13 @@ export default function Navbar() {
                   Features
                 </a>
                 <a
-                  href='#'
+                  href='/testimonials'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
-                  Marketplace
+                  Testimonials
                 </a>
                 <a
-                  href='#'
+                  href='/about'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
                   Company
