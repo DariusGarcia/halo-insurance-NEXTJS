@@ -2,6 +2,8 @@ import Navbar from '../components/navbar/navbar'
 import Head from 'next/head'
 import LandingHeader from '@/components/header/landingHeader/landingHeader'
 import LandingServices from '@/components/landing/services'
+import LandingTestimonials from '@/components/testimonials/testimonials'
+import LandingCTA from '@/components/landing/cta'
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
         <main className='h-full'>
           <LandingHeader />
           <LandingServices />
+          <LandingTestimonials />
+          <LandingCTA />
         </main>
       </div>
     </>
