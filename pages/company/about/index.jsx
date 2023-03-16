@@ -6,6 +6,7 @@ export default function About() {
       <Head>
         <title>Halo - About Us</title>
       </Head>
+      <h1>about us</h1>
     </div>
   )
 }

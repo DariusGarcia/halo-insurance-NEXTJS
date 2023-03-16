@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-export default function LandingHeader() {
+import { createClient } from 'next-sanity'
+
+export default function LandingHeader({ landingHeader }) {
   return (
     <div className='relative isolate'>
       <svg
@@ -65,13 +67,16 @@ export default function LandingHeader() {
               <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
                 Experience peace of mind with our comprehensive coverage.
               </h1>
-              <p className='relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none'>
-                Halo Insurance is dedicated to cupidatat minim id magna ipsum
-                sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                labore commodo nulla aliqua proident mollit ullamco exercitation
-                tempor. Sint aliqua anim nulla sunt mollit id pariatur in
-                voluptate cillum.
-              </p>
+              {landingHeader?.length > 0 &&
+                landingHeader?.map((landingText) => (
+                  <p
+                    key={landingText?._id}
+                    className='relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none'
+                  >
+                    {landingText?.landingHeaderText}
+                  </p>
+                ))}
+              {!landingHeader?.length > 0 && <p>Error fetching content.</p>}
               <div className='mt-10 flex items-center gap-x-6'>
                 {/* TODO: change link */}
                 <Link

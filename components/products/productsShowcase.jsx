@@ -18,7 +18,10 @@ export default function ProductsShowcase() {
         <div className='mt-20 flow-root'>
           <div className='isolate -mt-16 grid max-w-sm grid-cols-1 gap-y-16 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none lg:grid-cols-3 lg:divide-y-0 lg:divide-x xl:-mx-4'>
             {tiers.map((tier) => (
-              <div key={tier.id} className='pt-16 lg:px-8 lg:pt-0 xl:px-14'>
+              <div
+                key={tier.id}
+                className='pt-4 md:pt-16 lg:px-8 lg:pt-0 xl:px-14'
+              >
                 <h3
                   id={tier.id}
                   className='text-base font-semibold leading-7 text-gray-900'
