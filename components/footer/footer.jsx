@@ -121,7 +121,7 @@ export default function Example() {
                   ))}
                 </ul>
               </div>
-              <div className='mt-10 md:mt-0'>
+              {/* <div className='mt-10 md:mt-0'>
                 <Link
                   href='/company/terms'
                   className='text-sm font-semibold leading-6 text-gray-900 p-2 hover:underline'
@@ -140,11 +140,31 @@ export default function Example() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <div className='mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24'>
+        <div className='flex flex-col mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24'>
+          <ul className='flex flex-row mb-2 gap-2 text-sm'>
+            <Link
+              className='text-black hover:underline hover:text-blue-800 border-r-2 pr-2'
+              href='/company/terms'
+            >
+              Terms of Service
+            </Link>
+            <Link
+              className='text-black hover:underline hover:text-blue-800 border-r-2 pr-2'
+              href='/company/policy'
+            >
+              Privacy
+            </Link>
+            <Link
+              className='text-black hover:underline hover:text-blue-800'
+              href='/company/accessibility'
+            >
+              Accessibility
+            </Link>
+          </ul>
           <p className='text-xs leading-5 text-gray-500'>
             &copy; {new Date().getFullYear()} Halo Insurance. All rights
             reserved.
@@ -159,7 +179,7 @@ const navigation = {
   products: [
     { name: 'Explore products', href: '/products/explore' },
     { name: 'Insurance packages', href: '#' },
-    { name: 'Request quote', href: '/company/contact' },
+    { name: 'Request a quote', href: '/company/contact' },
   ],
   resources: [
     { name: 'Pricing', href: '/products/explore' },
@@ -174,11 +194,11 @@ const navigation = {
     { name: 'Contact', href: '/company/about' },
     { name: 'Partners', href: '#' },
   ],
-  legal: [
-    { name: 'Claim', href: '/company/claims' },
-    { name: 'Privacy', href: '/company/privacy' },
-    { name: 'Terms', href: '/company/terms' },
-  ],
+  // legal: [
+  //   { name: 'Privacy', href: '/company/privacy' },
+  //   { name: 'Terms', href: '/company/terms' },
+  //   { name: 'Accessibility', href: '/company/accessibility' },
+  // ],
   social: [
     {
       name: 'Facebook',
@@ -217,3 +237,18 @@ const navigation = {
     },
   ],
 }
+
+const footerNavigation = [
+  {
+    name: 'Terms of Service',
+    href: '/company/terms',
+  },
+  {
+    name: 'Privacy',
+    href: '/company/privacy',
+  },
+  {
+    name: 'Accessibility',
+    href: '/company/accessibility',
+  },
+]
