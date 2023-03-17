@@ -484,18 +484,18 @@ const company = [
     href: '/company/testimonials',
     icon: HeartIcon,
   },
-  {
-    name: 'Terms of service',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '/company/terms',
-    icon: ClipboardDocumentIcon,
-  },
-  {
-    name: 'Privacy policy',
-    description: 'Sint aliqua anim nulla sunt mollit id pariatur',
-    href: '/company/policy',
-    icon: FingerPrintIcon,
-  },
+  // {
+  //   name: 'Terms of service',
+  //   description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+  //   href: '/company/terms',
+  //   icon: ClipboardDocumentIcon,
+  // },
+  // {
+  //   name: 'Privacy policy',
+  //   description: 'Sint aliqua anim nulla sunt mollit id pariatur',
+  //   href: '/company/policy',
+  //   icon: FingerPrintIcon,
+  // },
 ]
 
 const productsCallsToAction = [
